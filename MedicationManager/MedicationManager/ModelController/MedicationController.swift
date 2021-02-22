@@ -18,6 +18,7 @@ class MedicationController {
     func createMedication(name: String, timeOfDay: Date) {
         let medication = Medication(name: name, timeOfDay: timeOfDay)
         medications.append(medication)
+        CoreDataStack.saveContext()
     }
 
     func updateMedication(_ medication: Medication) {

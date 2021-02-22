@@ -27,8 +27,6 @@ class MedicationListViewController: UIViewController {
     }
 
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toEditMedication",
            let destination = segue.destination as? MedicationDetailViewController,
@@ -37,8 +35,7 @@ class MedicationListViewController: UIViewController {
             destination.medication = medication
         }
     }
-
-}
+}//END OF CLASS
 
 extension MedicationListViewController: UITableViewDataSource, UITableViewDelegate {
 
@@ -55,5 +52,4 @@ extension MedicationListViewController: UITableViewDataSource, UITableViewDelega
         cell.configure(with: medication)
         return cell
     }
-    
-}
+}//END OF EXTENSION
